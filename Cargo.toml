@@ -1,0 +1,19 @@
+[package]
+name = "modbus_router"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "lib"
+path = "src/lib/mod.rs"
+
+[dependencies]
+async-channel = "2.2.0"
+serial-thread = { git = "https://github.com/pythcoiner/serial-thread-rust.git", rev = "c4b69725da5721126263b03501920394de4d8ce9" }
+#serial-thread = { path = "../../../rust/serial-thread-rust", features = [] }
+tokio = { version = "1.36.0", features = ["sync"] }
+modbus-core = { git = "https://github.com/pythcoiner/modbus-core.git", branch = "master" }
+chrono = "0.4.35"
+colored = "2.1.0"
+log = "0.4.21"
+fern = "0.6.2"
